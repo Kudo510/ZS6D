@@ -28,7 +28,6 @@ pip install tqdm==4.65.0
 pip install timm==0.9.16
 pip install matplotlib==3.8.3
 pip install scikit-learn==1.4.1.post1
-pip install opencv-python==4.9.0
 pip install git+https://github.com/lucasb-eyer/pydensecrf.git@dd070546eda51e21ab772ee6f14807c7f5b1548b
 pip install transforms3d==0.4.1
 pip install pillow==9.4.0
@@ -41,6 +40,8 @@ pip install pyopengl==3.1.1a1
 pip install pyglet==2.0.10
 pip install numba==0.59.0
 pip install jupyter==1.0.0
+
+pip install opencv-python
 ```
 
 

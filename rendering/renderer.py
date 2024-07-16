@@ -8,7 +8,7 @@ from vispy import app, gloo
 
 import OpenGL.GL as gl
 
-app.use_app('pyglet')   # Set backend
+app.use_app('egl')   # Set backend
 #app.use_app('PyQt4')
 
 _vertex_code_colored = """

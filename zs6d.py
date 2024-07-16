@@ -41,7 +41,7 @@ class ZS6D:
         try:
             for obj_id, template_labels in tqdm(self.templates_gt.items()):
                 self.templates_desc[obj_id] = torch.cat([torch.from_numpy(np.load(template_label['img_desc'])).unsqueeze(0)
-                                                    for i, template_label in enumerate(template_labels)
+                                                    for i, template_label in enumerate(template_labels[:162])
                                                     if i % subset_templates == 0], dim=0)
 
                 templates_gt_subset[obj_id] = [template_label for i, template_label in
@@ -84,7 +84,7 @@ class ZS6D:
 
                 resize_factor = float(crop_size) / img_crop.size[0]
 
-                points1, points2, crop_pil, template_pil = self.extractor.find_correspondences_fastkmeans(img_crop, template, num_pairs=20, load_size=crop_size)
+                points1, points2, crop_pil, template_pil = self.extractor.find_correspondences(img_crop, template, num_pairs=20, load_size=crop_size)
 
                 if not points1 or not points2:
                     raise ValueError("Insufficient correspondences found.")

@@ -8,7 +8,7 @@ from src.correspondences import chunk_cosine_sim
 from sklearn.cluster import KMeans
 import numpy as np
 import time
-from external.kmeans_pytorch.kmeans_pytorch import kmeans
+# from external.kmeans_pytorch.kmeans_pytorch import kmeans
 
 
 
