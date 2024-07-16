@@ -279,6 +279,7 @@ class ViTExtractor:
 
     def extract_descriptors(self, batch: torch.Tensor, layer: int = 11, facet: str = 'key',
                             bin: bool = False, include_cls: bool = False) -> torch.Tensor:
+        # here layer = 9, facet = key, bin = True
         """
         extract descriptors from the model
         :param batch: batch to extract descriptors for. Has shape BxCxHxW.
